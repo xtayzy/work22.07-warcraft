@@ -1,0 +1,76 @@
+{% extends 'warcraft/layouts/base.html' %}
+
+{% block content %}
+    <div class="main-block">
+        {% for main in about %}
+            <div class="main" style="margin-bottom: 80px">
+                <div>
+                    <img style="width: 1690px;height: 900px" src="{{ main.image.url }}" alt="">
+                </div>
+                <div class="main-text">
+                    {{ main.text }}
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="main comp">
+            <div style="font-size: 80px">
+                Компании
+            </div>
+            <div>
+                <img style="width: 1500px;height: 800px" src="{{ company.image.url }}" alt="">
+            </div>
+            <div class="main-text">
+                {{ company.text }}
+            </div>
+        </div>
+
+        <div class="main comp" style="background-image: url('{{ elfs_back.image.url }}')">
+            <div style="font-size: 80px">
+                Компания эльфов
+            </div>
+            <div>
+                <img style="width: 1500px;height: 800px" src="{{ elfs.image.url }}" alt="">
+            </div>
+            <div class="main-text">
+                {{ elfs.description }}
+            </div>
+        </div>
+
+        <div class="main comp" style="background-image: url('{{ people_back.image.url }}')">
+            <div style="font-size: 80px">
+                Компания людей
+            </div>
+            <div>
+                <img style="width: 1500px;height: 800px" src="{{ people.image.url }}" alt="">
+            </div>
+            <div class="main-text">
+                {{ people.description }}
+            </div>
+        </div>
+
+        <div class="main comp" style="background-image: url('{{ undead_back.image.url }}')">
+            <div style="font-size: 80px">
+                Компания нежити
+            </div>
+            <div>
+                <img style="width: 1500px;height: 800px" src="{{ undead.image.url }}" alt="">
+            </div>
+            <div class="main-text">
+                {{ undead.description }}
+            </div>
+        </div>
+
+        <div class="main comp" style="background-image: url('{{ orgs_back.image.url }}')">
+            <div style="font-size: 80px">
+                Компания орков
+            </div>
+            <div>
+                <img style="width: 1500px;height: 800px" src="{{ orgs.image.url }}" alt="">
+            </div>
+            <div class="main-text">
+                {{ orgs.description }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

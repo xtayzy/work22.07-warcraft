@@ -1,0 +1,41 @@
+{% extends 'warcraft/layouts/base.html' %}
+
+
+
+{% block content %}
+    <div class="music-block">
+        {% for music in musics %}
+            <div class="audio-player">
+                <audio controls>
+                    <source src="{{ music.audio.url }}" type="audio/mpeg">
+                </audio>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="char-block">
+        <div style="font-size: 80px">
+            Персонажи
+        </div>
+        <div class="chars">
+            {% for char in chars %}
+            	<div class="char">
+                    <div>
+                        <img  src="{{ char.image.url }}" alt="">
+                    </div>
+                    <div>
+                        {{ char.name }}
+                    </div>
+                    <div>
+                        компания: {{ char.company }}
+                    </div>
+                    <div style="text-align: justify">
+                        {{ char.description }}
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

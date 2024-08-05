@@ -1,0 +1,17 @@
+{% extends 'warcraft/layouts/base.html' %}
+
+
+{% block content %}
+    <div class="video-block">
+        {% for video in videos %}
+            <video
+                    controls
+                    muted>
+                <source src="{{ video.video.url }}">
+            </video>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
+

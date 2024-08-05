@@ -1,0 +1,11 @@
+{% extends 'warcraft/layouts/base.html' %}
+
+
+
+{% block content %}
+    <div class="screen-block">
+        {% for screen in screenshots %}
+            <img style="width: 600px; height: 350px" src="{{ screen.image.url }}" alt="">
+        {% endfor %}
+    </div>
+{% endblock %}
